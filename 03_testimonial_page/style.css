@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fafaf9;
+}
+
+.container {
+  height: 100vh;
+  margin: 0 72px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.left {
+  width: 50%;
+}
+
+.left-star {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f5c044;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-title {
+  margin: 16px 0;
+  color: #18181b;
+  font-size: 36px;
+}
+
+.left-content {
+  font-size: 20px;
+  color: #52525a;
+  line-height: 36px;
+  word-spacing: 1px;
+}
+
+.left-list {
+  margin-top: 36px;
+  color: #52525a;
+  font-size: 14px;
+  list-style: none;
+}
+
+.left-list li {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.right {
+  width: 50%;
+  display: grid;
+  gap: 60px;
+}
+
+.right-review {
+  background: #ffffff;
+  width: 350px;
+  padding: 30px;
+}
+
+.right-review-company {
+  display: flex;
+  align-items: center;
+}
+
+.right-review-company-image {
+  width: 96px;
+  margin-right: 16px;
+}
+
+.right-review h5 {
+  font-size: 16px;
+  margin: 16px 0;
+}
+
+.right-review p {
+  color: #52525a;
+  font-size: 16px;
+}
+
+.right-review-right {
+  place-self: flex-end;
+}
+
+@media (max-width: 640px) {
+  .container {
+    margin: 100px 25px;
+    margin-top: 80px;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .left {
+    width: auto;
+  }
+
+  .right {
+    width: 100%;
+    margin-top: 48px;
+  }
+}
