@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #111729;
+  --secondary-color: #223344;
+  --background-color: #f2f9fe;
+  --main-image: url(images/Sun_fill.svg);
+  --toggle-image: url(images/Moon_fill_light.svg);
+  --toggle-image-position: 6px;
+}
+
+.dark-theme {
+  --primary-color: #f2f9fe;
+  --secondary-color: #909193;
+  --background-color: #111729;
+  --main-image: url(images/Moon_fill_light.svg);
+  --toggle-image: url(images/Sun_fill.svg);
+  --toggle-image-position: 28px;
+}
+
+body {
+  background: var(--background-color);
+  padding: 0 72px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0;
+}
+
+.nav-buttons {
+  list-style: none;
+  display: flex;
+  gap: 38px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.nav-buttons li {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.nav-buttons .selected {
+  color: var(--primary-color);
+}
+
+.nav-switch {
+  width: 54px;
+  height: 26px;
+  border-radius: 13px;
+  cursor: pointer;
+  background: var(--primary-color) var(--toggle-image);
+  background-size: 18px;
+  background-position: var(--toggle-image-position);
+  background-repeat: no-repeat;
+}
+
+.nav-switch-toggle {
+  width: 22px;
+  height: 22px;
+  background: var(--background-color) var(--main-image);
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-left: 3px;
+  transition: transform 0.4s;
+}
+
+.nav-switch-toggle.toggled {
+  transform: translateX(26px);
+}
+
+.mobile-nav-bar {
+  display: none;
+}
+
+i {
+  cursor: pointer;
+}
+
+.menu-icon {
+  color: var(--primary-color);
+  display: none;
+}
+
+main {
+  display: flex;
+}
+
+.left {
+  width: 50%;
+}
+
+.left-div {
+  width: 68%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-subtitle {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.left-title {
+  font-size: 60px;
+  font-weight: 800;
+  margin-top: 24px;
+  color: var(--primary-color);
+}
+
+.left-content {
+  font-size: 18px;
+  color: var(--secondary-color);
+  margin-top: 32px;
+}
+
+.buttons {
+  margin: 44px 0;
+}
+
+.button-one {
+  width: 170px;
+  height: 50px;
+  font-size: 16px;
+  text-transform: uppercase;
+  background: #2a4dd0;
+  border: none;
+  outline: none;
+  color: #f2f9fe;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button-two {
+  color: #2a4dd0;
+  margin-left: 32px;
+  font-weight: 600;
+  font-size: 16px;
+  text-underline-offset: 4px;
+}
+
+.benefits {
+  display: flex;
+  gap: 24px;
+}
+
+.benefit {
+  display: flex;
+  gap: 6px;
+  color: var(--secondary-color);
+}
+
+.right {
+  width: 50%;
+}
+
+.right img {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding: 0 32px;
+  }
+
+  main {
+    flex-direction: column-reverse;
+  }
+
+  .left {
+    width: 100%;
+    padding: 10vh 80px;
+  }
+
+  .left-div {
+    width: 100%;
+  }
+
+  .left-content {
+    width: 60%;
+  }
+
+  .right {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 0 24px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-buttons,
+  .nav-switch {
+    display: none;
+  }
+
+  .mobile-nav-bar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 24px 24px 0 0;
+    width: 60%;
+    height: 100%;
+    background: var(--background-color);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-nav-bar .menu-icon {
+    place-self: flex-end;
+  }
+
+  .nav-buttons-mobile {
+    display: block;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .nav-buttons-mobile li {
+    font-size: 28px;
+  }
+
+  .nav-switch-mobile {
+    display: block;
+    margin-top: 48px;
+    background: var(--primary-color) var(--toggle-image);
+    background-size: 18px;
+    background-position: var(--toggle-image-position);
+    background-repeat: no-repeat;
+  }
+
+  .left {
+    padding: 0 4%;
+    padding-bottom: 10vh;
+  }
+
+  .left-title {
+    font-size: 40px;
+  }
+
+  .left-content {
+    width: 100%;
+  }
+
+  .right img {
+    width: 100%;
+  }
+}
