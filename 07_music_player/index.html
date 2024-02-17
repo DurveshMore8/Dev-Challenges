@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="player">
+        <img
+          id="thumbnail"
+          class="player-thumbnail"
+          src="images/cover-1.png"
+          alt=""
+        />
+        <div class="player-music-details">
+          <h4 id="songName" class="player-music-details-name">
+            Lost in the City Lights
+          </h4>
+          <span id="songAuthor" class="player-music-details-author"
+            >Cosmo Sheldrake</span
+          >
+        </div>
+        <div class="player-music">
+          <div class="player-music-time">
+            <span id="currentTime"></span>
+            <span id="totalTime"></span>
+          </div>
+          <div
+            id="progressContainer"
+            class="player-music-length"
+            onclick="clickProgressBar(event)"
+          >
+            <div id="progress" class="player-music-length-completed"></div>
+          </div>
+          <audio id="playerMusicAudio" autoplay>
+            <source
+              src="images/lost-in-city-lights-145038.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+        </div>
+        <div class="player-buttons">
+          <img
+            id="previousSong"
+            src="images/Stop_and_play_fill-1.svg"
+            alt=""
+            onclick="previousSong()"
+          />
+          <div id="playPause" class="player-buttons-play-pause">
+            <img src="images/Pause_fill.svg" alt="" />
+          </div>
+          <img
+            id="nextSong"
+            src="images/Stop_and_play_fill_reverse.svg"
+            alt=""
+            onclick="nextSong()"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
