@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="quote-container">
+        <div id="author" class="quote-author"></div>
+        <div id="tags" class="quote-tags"></div>
+        <div id="quote" class="quote-quote"></div>
+      </div>
+      <div class="clickables">
+        <div class="clickables-button" onclick="fetchQuote()">
+          <img src="assets/Regroup.svg" alt="" />
+        </div>
+        <div class="clickables-button" onclick="copyQuote()">
+          <img src="assets/link.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
