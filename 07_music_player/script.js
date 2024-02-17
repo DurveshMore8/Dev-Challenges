@@ -68,3 +68,6 @@ play_pause.addEventListener("click", playPause);
 
 audio.addEventListener("loadedmetadata", loadAudio);
 audio.addEventListener("timeupdate", updateProgressBar);
+
+document.addEventListener("pause", playPause);
+document.addEventListener("play", playPause);
