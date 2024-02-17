@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input">
+        <img class="input-logo" src="assets/logo-qr-generator.svg" alt="" />
+        <div class="input-text-field">
+          <input id="inputUrl" type="text" placeholder="Enter an url" />
+          <button onclick="generateQr()">QR code</button>
+        </div>
+      </div>
+      <div class="output">
+        <img class="qr-logo" src="assets/logo-qr-generator.svg" alt="" />
+        <div class="qr-background">
+          <div class="qr-background-div">
+            <div id="qrCode"></div>
+          </div>
+        </div>
+        <div class="qr-buttons">
+          <button id="download" onclick="downloadQr()">
+            <span>Download</span>
+            <span class="material-symbols-outlined">download</span>
+          </button>
+          <button id="share" onclick="shareQr()">
+            <span>Share</span>
+            <span class="icon material-symbols-outlined">link</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
