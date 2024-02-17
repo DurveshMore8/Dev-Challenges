@@ -24,10 +24,9 @@ const updateProgressBar = () => {
   current_time.innerHTML = secondsToMMSS(audio.currentTime);
 };
 
-const loadAudio = async () => {
+const loadAudio = () => {
   current_time.innerHTML = secondsToMMSS(audio.currentTime);
   total_time.innerHTML = secondsToMMSS(audio.duration);
-  await audio.play();
 };
 
 const clickProgressBar = (event) => {
@@ -62,6 +61,8 @@ const nextSong = () => {
   song_name.innerHTML = "Forest Lullaby";
   song_author.innerHTML = "Lesfm";
 };
+
+loadAudio();
 
 play_pause.addEventListener("click", playPause);
 
