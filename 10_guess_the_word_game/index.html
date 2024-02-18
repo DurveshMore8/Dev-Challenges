@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Word Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="guess-the-word">
+        <h4 class="game-header">Word Scramblle</h4>
+        <div class="game-random-words">relowf</div>
+        <div class="game-status">
+          <div class="game-status-tries">
+            <label>Tries(<span id="incorrectAttempts"></span>/5):</label>
+            <div class="game-status-tries-circle"></div>
+            <div class="game-status-tries-circle"></div>
+            <div class="game-status-tries-circle"></div>
+            <div class="game-status-tries-circle"></div>
+            <div class="game-status-tries-circle"></div>
+          </div>
+          <div class="game-status-mistakes">
+            <label>Mistakes:</label>
+            <span id="incorrectWords"></span>
+          </div>
+        </div>
+        <div class="game-guessed-words">
+          <div class="game-guessed-words-word focused">
+            <input placeholder="_" maxlength="1" />
+          </div>
+          <div class="game-guessed-words-word">
+            <input maxlength="1" />
+          </div>
+          <div class="game-guessed-words-word">
+            <input maxlength="1" />
+          </div>
+          <div class="game-guessed-words-word">
+            <input maxlength="1" />
+          </div>
+          <div class="game-guessed-words-word">
+            <input maxlength="1" />
+          </div>
+          <div class="game-guessed-words-word">
+            <input maxlength="1" />
+          </div>
+        </div>
+        <div class="game-buttons">
+          <button id="random" onclick="getRandomWordAndRandomize()">
+            Random
+          </button>
+          <button id="reset" onclick="resetQuiz()">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

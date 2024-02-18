@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: url(assets/bg-guess-the-word.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guess-the-word {
+  width: 418px;
+  padding: 32px;
+  border-radius: 12px;
+  background: #030616;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-header {
+  color: transparent;
+  background: linear-gradient(to right, #7429c6 20%, #c951e7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 20px;
+}
+
+.game-random-words {
+  width: 100%;
+  color: #97a3b6;
+  letter-spacing: 16px;
+  text-align: center;
+  border-radius: 4px;
+  background: #4a5567;
+  padding: 16px;
+  margin: 24px 0;
+  font-size: 32px;
+  box-shadow: 0 4px 0 #000;
+}
+
+.game-status {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-status-tries label,
+.game-status-mistakes label {
+  color: #4a5567;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.game-status-tries {
+  display: flex;
+  align-items: center;
+}
+
+.game-status-tries-circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #4a5567;
+  margin: 0 2px;
+}
+
+.game-status-tries-circle.filled {
+  background: #7429c6;
+}
+
+.game-status-mistakes span {
+  color: #97a3b6;
+  font-size: 20px;
+}
+
+.game-guessed-words {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: 48px 0;
+}
+
+.game-guessed-words-word {
+  width: 42px;
+  height: 42px;
+  border: 2px solid #4a5567;
+  border-radius: 8px;
+  color: #f2f5f9;
+  background: transparent;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.game-guessed-words-word.shake {
+  animation: shake 1s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(10deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate(-10deg);
+  }
+}
+
+.game-guessed-words-word input {
+  width: 100%;
+  height: 60%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  color: #f2f5f9;
+  text-align: center;
+  caret-color: transparent;
+  user-select: none;
+}
+
+.game-guessed-words-word input::placeholder {
+  color: #f2f5f9;
+}
+
+.game-guessed-words-word.focused {
+  border: 2px solid #672171;
+}
+
+.game-buttons {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-buttons button {
+  font-size: 14px;
+  padding: 8px 34px;
+  border: none;
+  outline: none;
+  background: #c951e7;
+  border-radius: 6px;
+  box-shadow: 0 4px 0 #672171;
+  color: #f2f5f9;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .guess-the-word {
+    width: 400px;
+  }
+
+  .game-buttons button {
+    padding: 8px 28px;
+  }
+}
